@@ -68,6 +68,38 @@ def sltime
 end
 
 
+def clear
+    puts `clear`
+end
+
+def breathe_out_command
+    puts `clear`
+    puts typew('Exhale for 5 seconds')
+end
+
+def breathing_pursed
+    # puts `clear`
+    # puts typew('breathe out')
+    puts `clear`
+    sleep(0.5)
+    5.times do |x|
+        puts x += 1
+        sleep(1)
+    end
+end
+
+def inhale
+    puts `clear`
+    puts typew("Inhale for 4 seconds")
+    puts `clear`
+    4.times do |x|
+        puts x += 1
+        sleep(1)
+    end
+end
+
+
+
 
 
 puts `clear`
@@ -83,12 +115,12 @@ typew("Congratulations on being accepted into Coder Academy.")
 puts
 typew("It's a wonderful achievement.")
 puts
-# puts `clear`
-# typew("I know things can get difficult during this course.")
-# puts
-# typew("It's normal to struggle with coding.")
-# puts
-# typew("But I want you to know that whatever you are going through, I'm here to listen.")
+puts `clear`
+typew("I know things can get difficult during this course.")
+puts
+typew("It's normal to struggle with coding.")
+puts
+typew("But I want you to know that whatever you are going through, I'm here to listen.")
 puts `clear`
 typew("Tell me #{name}, which campus are you located in?")
 puts
@@ -146,3 +178,35 @@ end
 
 
 # ------------------------Breathing-----------------------------------------
+
+clear()
+typew("We are going to do a set of breathing exercises")
+puts
+typew("Breathing exercises help us relax")
+puts
+typew("Employing a relaxed breathing pattern calms the nervous system.")
+puts
+typew("Would you like to do this exercise, #{name}?(Y/N)")
+puts
+
+exercise_response = gets.strip.downcase
+if exercise_response == "n"
+
+else
+    clear()
+    typew("Fantastic")
+    puts
+    typew("Remember to breathe in through your nose and out through your mouth")
+    
+    clear()
+    puts typew("Let's begin")
+    inhale
+    breathe_out_command
+    breathing_pursed
+    inhale
+    breathe_out_command
+    breathing_pursed
+    inhale
+    breathe_out_command
+    breathing_pursed
+end
