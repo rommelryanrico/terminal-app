@@ -1,3 +1,1 @@
-# Readme for terminal App
-
-## testing git - Ivan
+Wellness Terminal App
