@@ -1,1 +1,0 @@
-Wellness Terminal App

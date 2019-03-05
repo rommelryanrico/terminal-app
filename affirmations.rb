@@ -53,9 +53,6 @@ affirmations = ["Mistakes help me learn and grow", "I haven't figured it out YET
 
 ran_affirmations = affirmations.sample(8)
 
- 
-
-# -----------------------------------------------------------------------------------
 clear()
 typew("We are now going to do an affirmation exercise")
 puts
