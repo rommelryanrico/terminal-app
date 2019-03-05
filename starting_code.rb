@@ -43,6 +43,8 @@
 
 #sign off with a goodbye message
 
+Todays journal has been completed, a positive quote. Everyday is a new day, don't linger on what happened today.
+
 # store journal entries from user
 #present entries in a fiile back to user
 
@@ -73,14 +75,24 @@ def clear
 end
 
 def breathe_out_command
+<<<<<<< HEAD
+    puts clear
+    puts typew('Exhale for 5 seconds')
+=======
     puts `clear`
     puts typew('Exhale')
+>>>>>>> master
 end
 
 def breathing_pursed
     # puts `clear`
     # puts typew('breathe out')
+<<<<<<< HEAD
+    puts clear
+    sleep(0.5)
+=======
     puts `clear`
+>>>>>>> master
     5.times do |x|
         puts x += 1
         sleep(1)
@@ -88,9 +100,15 @@ def breathing_pursed
 end
 
 def inhale
+<<<<<<< HEAD
+    puts clear
+    puts typew("Inhale for 4 seconds")
+    puts clear
+=======
     puts `clear`
     puts typew("Inhale")
     puts `clear`
+>>>>>>> master
     4.times do |x|
         puts x += 1
         sleep(1)
@@ -220,6 +238,10 @@ else
     puts
     typew("Spare a moment to write one thing that you are grateful for today and why")
     puts
+<<<<<<< HEAD
+    third_thought_array = gets.strip    
+    typew("Thank you for sharing that with me")
+=======
     second_thought_array = gets.strip    
     typew("Thank you for sharing your thoughts")
 end
@@ -294,3 +316,4 @@ end
         sleep(2)
         puts
     end
+>>>>>>> master
