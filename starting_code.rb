@@ -98,6 +98,14 @@ def inhale
     end
 end
 
+
+jokes = ["And the Lord said unto John \"Come forth and you will receive eternal life\". \nBut John came fifth and won a toaster.", 
+    "I threw a boomerang a few years ago.\nNow I live in constant fear.", "My grandfather has the heart of a lion \nand a lifetime ban at the zoo.",
+    "Someone stole my Microsoft Office and they're gonna pay. You have my Word.", "The first rule about Alzheimers club: Don't talk about chess club", 
+    "I’ve just written a song about tortillas; actually, it’s more of a rap.", "I was raised as an only child, \nwhich really annoyed my sister",
+    "Where does a king keep his armies? \nIn his sleevies."]
+
+
 first_thought_array = []
 second_thought_array = []
 third_thought_array = []
@@ -199,27 +207,57 @@ name = 'Todd'
 # exercise_response = gets.strip.downcase
 # if exercise_response == "n"
 
-else
-    clear()
-    typew("Fantastic")
+# else
+    # clear()
+    # typew("Fantastic")
+    # puts
+    # typew("Remember to breathe in through your nose and out through your mouth")
+    # clear()
+    # puts typew("Let's begin")
+    # inhale
+    # breathe_out_command
+    # breathing_pursed
+    # inhale
+    # breathe_out_command
+    # breathing_pursed
+    # inhale
+    # breathe_out_command
+    # breathing_pursed
+    # clear
+    # typew("Great")
+    # puts
+    # typew("Spare a moment to write one thing that you are grateful for today and why")
+    # puts
+    # second_thought_array = gets.strip    
+    # typew("Thank you for sharing your thoughts")
+# end
+clear()
+typew("They say that laughter is the best medicine")
+puts
+typew("It boosts the immune system and releases endorphins")
+puts
+typew("It also protects the heart and lightens anger's heavy load")
+puts
+typew("But more importantly...........it's fun")
+clear
+typew("Here are a series of jokes to make you laugh")
+puts
+typew("If they fail, I'm sorry.")
+puts
+typew("It's what I could find.")
+typew(" Brace yourself")
+clear
+typew("By the way, this is compulsory. No choice :\)")
+puts
+typew("Enjoy...")
+
+ran_jokes = jokes.sample(6)
+
+ran_jokes.each do |x|
+    puts `clear`
+    typew(x)
+    sleep(2)
     puts
-    typew("Remember to breathe in through your nose and out through your mouth")
-    clear()
-    puts typew("Let's begin")
-    inhale
-    breathe_out_command
-    breathing_pursed
-    inhale
-    breathe_out_command
-    breathing_pursed
-    inhale
-    breathe_out_command
-    breathing_pursed
-    clear
-    typew("Great")
-    puts
-    typew("Spare a moment to write three things that you are grateful for today")
-    puts
-    second_thought_array = gets.strip    
-    typew("Thank you for sharing your thoughts")
 end
+
+
