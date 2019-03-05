@@ -50,8 +50,8 @@
 
 
 # focus exercises
-# require 'colorize'
-# require 'colorized_string'
+require 'colorize'
+require 'colorized_string'
 
 def typew(string)
     string.each_char do |str|
@@ -100,7 +100,7 @@ end
 
 
 
-
+# -----------------------------Beginning------------------------
 
 puts `clear`
 typew("Hey")
@@ -135,8 +135,9 @@ elsif campus == '2'
 elsif campus == '3'
     typew("Wow. Melbourne is really cool. Even if it's cold in winter find ways to do get outside")
 end
-name = 'ivan'
 puts `clear`
+
+# --------------------------------------Graph--------------------------------
 typew("So #{name}, I want you to have a look at this")
 puts
 puts
@@ -151,11 +152,13 @@ print "..................................................".colorize(:color => :l
 sleep(3)
 puts 
 puts
-typew("On a scale from 1 to 8 - 1 being the lowest and 9 the highest - how are you feeling right now?")
+typew("On a scale from 1 to 8 - 1 being the lowest and 8 the highest - how are you feeling right now?")
 puts
 scale = gets.strip
+# ---------------------------------1st Thought--------------------------------
 first_thought_array = []
 typew("Can you put into words how you are feeling?")
+puts
 first_thought = gets.strip
 first_thought_array << first_thought
 
@@ -164,7 +167,7 @@ puts `clear`
 if scale == '1' || scale == '2'
     typew("#{name}, it's ok to feel down.")
     puts
-    typew(" But it's also important no to stay there too long")
+    typew("But it's also important no to stay there too long")
     puts
     typew("Rememeber, you are an incredible individual.")
     typew(" And you are doing an amazing thing")
@@ -197,7 +200,6 @@ else
     typew("Fantastic")
     puts
     typew("Remember to breathe in through your nose and out through your mouth")
-    
     clear()
     puts typew("Let's begin")
     inhale
