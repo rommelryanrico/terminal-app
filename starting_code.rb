@@ -253,9 +253,9 @@ typew("Enjoy...")
 
 ran_jokes = jokes.sample(6)
 
-ran_jokes.each do |x|
+ran_jokes.each do |joke|
     puts `clear`
-    typew(x)
+    typew(joke)
     sleep(2)
     puts
 end
