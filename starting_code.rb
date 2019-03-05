@@ -73,14 +73,14 @@ def clear
 end
 
 def breathe_out_command
-    puts `clear`
+    puts clear
     puts typew('Exhale for 5 seconds')
 end
 
 def breathing_pursed
     # puts `clear`
     # puts typew('breathe out')
-    puts `clear`
+    puts clear
     sleep(0.5)
     5.times do |x|
         puts x += 1
@@ -89,9 +89,9 @@ def breathing_pursed
 end
 
 def inhale
-    puts `clear`
+    puts clear
     puts typew("Inhale for 4 seconds")
-    puts `clear`
+    puts clear
     4.times do |x|
         puts x += 1
         sleep(1)
