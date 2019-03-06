@@ -19,20 +19,20 @@ Here4U is a terminal application written in Ruby which helps Coder Academy stude
 
 ## Motivation & Inspiration
 
-The idea for this application came to me (Ryan) after my experience of the first week of this course. I was feeling quite overwhelmed with everything and my stress levels were at an all time high. I eventually imploded by the end of the week and lost all confidence in myself. But through talking with friends, family and peers. I was able to forget my worries, reframe my thinking and remember the reasons why I decided to do this course.
+The idea for this application came Ryan after his experience of the first week of this course. He was feeling quite overwhelmed with everything and his stress levels were at an all time high. He eventually imploded by the end of the week and lost all confidence in him myself. But through talking with friends, family and peers he was able to forget his worries, reframe his thinking and remember the reasons why he decided to do this course.
 
 ## Build Process
 
-Our primary aim was to create an application that would provide a set of activities to the user based on how they were feeling at the time. The activities would help the user to reset their mind, feel positive emotions and also remember their own reasons for doing this course. The program would then store their journals and create a text file to keep for self reflection.
+Our primary aim was to create an application that would provide a set of activities to the user based on how they were feeling at the time. The activities would help the user to reset their mind and feel positive emotions. The program would also store a set of journal entries and create a text file to keep for self reflection.
 
-We really set our focus on the experience of the app. It was really important to us that the user felt like they were talking to someone real, which we tried to convey through the language used and the way the information was presented, in order to build comfort and familiarity with the user. We also randomized the time it took to print each character and the time between each line to simulate computer sentience or the feeling that someone was typing to the user in real time.
+We really set our focus on the experience of the app. It was really important to us that the user felt like they were talking to someone real. We tried to convey this through the language we used and the way the information was presented, in order to build comfort and familiarity with the user. We also randomized the time it took to print each character and the time between each line to simulate computer sentience or the feeling that someone was typing to the user in real time.
 
 ## Features
 
-1. Provides a set of activities based on how the user is feeling.
-2. Activities include a breathing exercise, an affirmation exercise, a physical activity exercise and a random joke generator.
-3. After every activity, it asks the user a question designed to elicit positive emotions.
-4. Provides at the end of the program, a list of the user's journal entries for their own self reflection.
+1. Provides an activity path based on how the user is feeling.
+2. Activities include a breathing exercise, an affirmation exercise and a random joke generator.
+3. After every activity is completed, it asks the user a question designed to elicit positive emotions.
+4. A list of the user's journal entries is provided at the end of the program for their own self reflection.
  
  - Extra features we wanted to implement:
     1. An exercise activity
