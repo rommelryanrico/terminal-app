@@ -69,16 +69,13 @@ ruby main.rb
 ```
 
 ## Screenshots
-#### Brainstorm
+
 <img src=./docs/Brainstorm.jpg>
-#### Flowchart
 <img src=./docs/Flowchart.jpg>
-#### Digital Communication
-<img src=./docs/Slack1.jpg>
-<img src=./docs/Slack3.jpg>
-<img src=./docs/Trello1.jpg>
-<img src=./docs/Trello3.jpg>
-#### Testing
+<img src=./docs/Slack1.png>
+<img src=./docs/Slack3.png>
+<img src=./docs/Trello1.png>
+<img src=./docs/Trello3.png>
 <img src=./docs/PryTest1.jpg>
 <img src=./docs/PryTest2.jpg>
 
@@ -93,6 +90,7 @@ ruby main.rb
 This project is licensed under the Ruby License - see the [LICENSE.txt](https://www.ruby-lang.org/en/about/license.txt) file for details
 
 ## Master Repository
+
 https://github.com/rommelryanrico/terminal-app
 
 ## References
