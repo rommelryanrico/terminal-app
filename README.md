@@ -19,7 +19,7 @@ Here4U is a terminal application written in Ruby which helps Coder Academy stude
 
 ## Motivation & Inspiration
 
-The idea for this application came Ryan after his experience of the first week of this course. He was feeling quite overwhelmed with everything and his stress levels were at an all time high. He eventually imploded by the end of the week and lost all confidence in him myself. But through talking with friends, family and peers he was able to forget his worries, reframe his thinking and remember the reasons why he decided to do this course.
+The idea for this application came to Ryan after his experience of the first week of this course. He was feeling quite overwhelmed with everything and his stress levels were at an all time high. He eventually imploded by the end of the week and lost all confidence in him myself. But through talking with friends, family and peers he was able to forget his worries, reframe his thinking and remember the reasons why he decided to do this course.
 
 ## Build Process
 
