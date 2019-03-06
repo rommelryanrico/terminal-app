@@ -2,8 +2,8 @@ require_relative 'tools'
 require 'colorize'
 require 'colorized_string'
 require 'date'
-#class defined - wellness
-class Wellness
+#class defined - Here_4_U
+class Here_4_U
     include WellnessExercises
     attr_accessor :name, :campus, :first_thought, :second_thought, :third_thought, :fourth_thought
     
@@ -251,7 +251,7 @@ affirmations = ["Mistakes help me learn and grow", "I haven't figured it out YET
 #expression used if user chooses '1' || '2' and then skips breathing exercise                
 no_worries_expressions = ["No worries.", "Not a problem.", "That\'s ok."]                
 #initialize new user
-new_user = Wellness.new
+new_user = Here_4_U.new
 new_user.get_name
 new_user.get_location
 choice = new_user.display_graph
