@@ -4,6 +4,7 @@ module WellnessExercises
     def typew(string)
         string.each_char do |str|
             print str
+            #0.05..0.10
             slt = rand(0.05..0.10)
             sleep(slt)
         end
@@ -13,7 +14,7 @@ module WellnessExercises
 
     #randomises time between each new line
     def sltime 
-        time = rand(0.5..1.5)
+        time = rand(0.5..1.0)
         sleep(time)
     end
 

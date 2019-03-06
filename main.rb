@@ -106,7 +106,7 @@ class Wellness
     #retrieve and store first thought for 'txt' file
     def get_first_thought
         first_thought_array = []
-        typew("Spare a moment to write one thing that you are grateful for today and why")
+        typew("Spare a moment to write one thing that you are grateful for today")
         first_thought_array = gets.strip    
         typew("Thank you for sharing your thoughts")
         @first_thought = first_thought_array
@@ -136,7 +136,7 @@ class Wellness
         typew("Remember to repeat the affirmations, word for word")
         clear
         puts typew("Let's begin")
-        ran_affirmations = array.sample(5)
+        ran_affirmations = array.sample(4)
         ran_affirmations.each do |affirmations|
             clear
             typew(affirmations)
@@ -160,11 +160,10 @@ class Wellness
         clear
         typew("They say that laughter is the best medicine")
         typew("It boosts the immune system and releases endorphins")
-        typew("But more importantly...........laughing is fun")
+        typew("But more importantly, laughing is fun")
         clear
         typew("Here are a series of jokes to make you laugh")
         typew("If they fail, I'm sorry.")
-        typew("Brace yourself")
     end
 
     #additional message if user inputs '5' || '6' at graph
@@ -175,7 +174,7 @@ class Wellness
 
     #randomly print out jokes from array
     def random_joke_generator(array)
-        ran_jokes = array.sample(5)
+        ran_jokes = array.sample(4)
         
         ran_jokes.each do |joke|
             clear
@@ -225,10 +224,9 @@ class Wellness
         clear
         typew("Thank you for being so open")
         typew("I have created a personal file with all your entries for self-reflection")
-        typew("Remember...")
-        typew("Don't let what you cannot do intefere with what you can do")
+        typew("Remember, don't let what you cannot do intefere with what you can do")
         clear
-        typew("Have a great day")
+        typew("Have a great day!")
     end
 
 end
