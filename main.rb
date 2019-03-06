@@ -33,7 +33,7 @@ class Here_4_U
     #retrieve and store user location
     def get_location
         campus = ""
-        typew("Tell me #{@name}, which campus are you located in?")
+        typew("Tell me #{@name}, which campus are you located at?")
         puts "[1] Sydney".colorize(:color => :light_white, :background => :light_black)
         puts "[2] Brisbane".colorize(:color => :light_white, :background => :light_black)
         puts "[3] Melbourne".colorize(:color => :light_white, :background => :light_black)
@@ -203,8 +203,8 @@ class Here_4_U
             line << "Location: " + @campus + "\n"
             line << "-------------------\n"
             line << "\n\n"
-            line << "Thank you for taking part in the Wellness App\n"
-            line << "Here are the entries you made for your perusal\n\n"
+            line << "Thank you for taking part in the Here4U app.\n"
+            line << "Here are the entries you made for your perusal.\n\n"
             line << "\n" + "What I'm grateful for" + "\n"
             line << "-------------------"
             line << "\n" + @first_thought + "\n" + "\n"
