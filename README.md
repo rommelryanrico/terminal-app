@@ -51,7 +51,7 @@ Initially we wanted to implement very simple functionality and cared more for th
 
 The implementaion of a class and class functions, as well as a module, allowed us to structure the code in a way that was more presentable and readable. We found that the output was more efficient once the code was refactored. 
 
-Dealing with the if/else conditionals was easier when we changed to Ruby case statements.
+Dealing with the if/else conditionals was easier when we used Ruby case statements.
 
 ## Setup
 
@@ -76,6 +76,7 @@ ruby main.rb
 #### Slack Communication
 <img width="1440" alt="slack1" src="https://user-images.githubusercontent.com/47291020/53855570-460f8a00-4022-11e9-9364-f4daf024c76f.png">
 <img width="1440" alt="slack3" src="https://user-images.githubusercontent.com/47291020/53855571-460f8a00-4022-11e9-8de9-290ef3daa3eb.png">
+#### Trello
 <img width="1440" alt="trello1" src="https://user-images.githubusercontent.com/47291020/53855572-46a82080-4022-11e9-90ca-916c0003c59e.png">
 <img width="1440" alt="trello3" src="https://user-images.githubusercontent.com/47291020/53855573-46a82080-4022-11e9-9a91-01f18bde3d43.png">
 
