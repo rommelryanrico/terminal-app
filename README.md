@@ -35,7 +35,7 @@ We really set our focus on the experience of the app. It was really important to
 4. A list of the user's journal entries is provided at the end of the program for their own self reflection.
  
  - Extra features we wanted to implement:
-    1. An exercise activity
+    1. A physical exercise activity
     2. An imagery exercise that plays an audio file while running
     3. More paths for the user if they were feeling a 7-8 or 9-10 on the scale
 
@@ -47,11 +47,11 @@ We really set our focus on the experience of the app. It was really important to
   * colorized_string
   * date
 
-Initially we wanted to implement very simple functionality and cared more for the experiential component of the app. However this made the source code very disorganised.
+Initially we cared more for the experiential component of the app at the expense of an organised control flow. However this made the source code very disorganised.
 
-The implementaion of a class and class functions, as well as a module, allowed us to structure the code in a way that was more presentable and readable. We found that the output was more efficient once the code was refactored. 
+The implementaion of a class and class functions, as well as a module, allowed us to structure the code in a way that was more presentable and readable. We found that the output was also more efficient once the code was refactored. 
 
-Dealing with the if/else conditionals was easier when we used Ruby case statements.
+Dealing with the if/else conditionals was also easier when we used Ruby case statements.
 
 ## Setup
 
@@ -60,7 +60,7 @@ Install gems via terminal, set require and then run main.rb
 ```
 gem install colorize
 
-require_relative 'module'
+require_relative 'tools'
 require 'colorize'
 require 'colorized_string'
 require 'date'
@@ -73,7 +73,7 @@ ruby main.rb
 ![brainstorm](https://user-images.githubusercontent.com/47291020/53855575-4871e400-4022-11e9-82ff-3f711dc0b28c.jpg)
 #### Flowchart
 ![flowchart](https://user-images.githubusercontent.com/47291020/53855569-4576f380-4022-11e9-973f-518941adf520.jpg)
-#### Slack Communication
+#### Digital Communication
 <img width="1440" alt="slack1" src="https://user-images.githubusercontent.com/47291020/53855570-460f8a00-4022-11e9-9364-f4daf024c76f.png">
 <img width="1440" alt="slack3" src="https://user-images.githubusercontent.com/47291020/53855571-460f8a00-4022-11e9-8de9-290ef3daa3eb.png">
 <img width="1440" alt="trello1" src="https://user-images.githubusercontent.com/47291020/53855572-46a82080-4022-11e9-90ca-916c0003c59e.png">
