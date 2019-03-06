@@ -1,9 +1,11 @@
-require_relative 'module'
+require_relative 'tools'
 require 'colorize'
 require 'colorized_string'
 require 'date'
 
+#class defined - wellness
 class Wellness
+
     include WellnessExercises
     attr_accessor :name, :campus, :first_thought, :second_thought, :third_thought, :fourth_thought
     def initialize
@@ -12,32 +14,27 @@ class Wellness
         @first_thought = ""
         @second_thought = ""
         @third_thought = ""
-        @fourth_thought = ""
     end
-
+    
+    #retrieve and store user name
     def get_name
         name = ""
-        puts `clear`
+        clear
         typew("Hey")
-        puts
         typew("May I ask your name?")
-        puts 
         name = gets.strip
-        @name = name
-        puts `clear`
+        @name = name.capitalize
+        clear
         typew("Hi #{@name}. It's nice to meet you")
-        puts
         typew("Congratulations on being accepted into Coder Academy.")
-        puts
         typew("It's a wonderful achievement.")
-        puts
-        puts `clear`
+        clear
     end
 
+    #retrieve and store user location
     def get_location
         campus = ""
         typew("Tell me #{@name}, which campus are you located in?")
-        puts
         puts "[1] Sydney".colorize(:color => :light_white, :background => :light_black)
         puts "[2] Brisbane".colorize(:color => :light_white, :background => :light_black)
         puts "[3] Melbourne".colorize(:color => :light_white, :background => :light_black)
@@ -52,13 +49,13 @@ class Wellness
             typew("Wow. Melbourne is really cool. Even if it's cold in winter find ways to get outside")
             @campus = 'Melbourne'
         end
-        puts `clear`
+        clear
     end
 
-
+    #display graph providing choice for user
+    #multiple use of puts to ensure proper output to user
     def display_graph
         typew("So #{name}, I want you to have a look at this")
-        puts
         puts
         puts
         puts "..................................".colorize(:color => :light_white, :background => :light_black)
@@ -71,137 +68,134 @@ class Wellness
         puts 
         puts
         typew("On a scale from 1 to 6 - 1 being the lowest and 6 the highest - how are you feeling right now?")
-        puts
+        # puts
         scale = gets.strip
         return scale
     end
     
+    #text section that connects graph to first exercise
     def breathing_preamble
         response = ""
         typew("#{@name}, it's ok to feel down.")
-        puts
         typew("But it's also important not to stay there too long")
-        puts
         typew("Remember, you are an incredible individual.")
-        clear
+        clear()
         typew("We are going to do a set of breathing exercises")
-        puts
-        typew("Breathing exercises help us relax")
-        puts
         typew("Employing a relaxed breathing pattern calms the nervous system.")
-        puts
         typew("Would you like to do this exercise, #{@name}?(Y/N)")
-        puts
         response = gets.strip.downcase
         return response
     end
     
+    #breathing exercise
     def breathing_generator
-        clear()
-        typew("Fantastic")
-        puts
-        typew("Remember to breathe in through your nose and out through your mouth")
-        clear()
-        puts typew("Let's begin")
-        inhale
-        breathe_out_command
-        breathing_pursed
-        inhale
-        breathe_out_command
-        breathing_pursed
-        inhale
-        breathe_out_command
-        breathing_pursed
         clear
+        typew("Fantastic")
+        typew("Remember to breathe in through your nose and out through your mouth")
+        clear
+        typew("Let's begin")
+        breathe_in
+        breathe_out
+        breathe_in
+        breathe_out
+        breathe_in
+        breathe_out
         typew("Great")
-        puts
     end
 
+    #retrieve and store first thought for 'txt' file
     def get_first_thought
         first_thought_array = []
         typew("Spare a moment to write one thing that you are grateful for today and why")
-        puts
         first_thought_array = gets.strip    
         typew("Thank you for sharing your thoughts")
         @first_thought = first_thought_array
     end
     
+    #text section that connects between breathing and affirmation
     def affirmation_preamble
         response = ""
-        clear()
+        clear
         typew("We are now going to do an affirmation exercise")
-        puts
         typew("By broadening the basis of our self-worth, affirmations can help us regulate our emotions.")
-        puts
-        typew("Would you like to do this exercise #{name}?(Y/N)")
-        puts
+        typew("Would you like to do this exercise, #{name}?(Y/N)")
         response = gets.strip.downcase
         return response
     end
 
+    #additional message in case user inputs '3' || '4' at graph
     def choice3_4_message
-        clear()
+        clear
         typew("I'm glad you're feeling ok. Here is something that might help you through the day")
     end
 
+    #randomly prints out affirmations from an array
     def affirmation_generator(array)
-        clear()
+        clear
         typew("That's great to hear")
-        puts
         typew("Remember to repeat the affirmations, word for word")
-        clear()
+        clear
         puts typew("Let's begin")
         ran_affirmations = array.sample(5)
         ran_affirmations.each do |affirmations|
-            puts clear
+            clear
             typew(affirmations)
             sleep(3)
             puts
         end
     end
 
+    #retrieve and store second entry for 'txt' file
     def get_second_thought
         second_thought_array = []
         typew("Great")
-        puts
-        typew("Now I want you to write about something that makes you happy and why?")
-        puts
+        typew("Now, write about something that makes you happy")
         second_thought_array = gets.strip    
         typew("Thank you for sharing that with me")
         @second_thought = second_thought_array
     end
 
+    #begins jokes section
     def joke_preamble
-        clear()
+        clear
         typew("They say that laughter is the best medicine")
-        puts
         typew("It boosts the immune system and releases endorphins")
-        puts
-        typew("But more importantly...........it's fun")
+        typew("But more importantly...........laughing is fun")
         clear
         typew("Here are a series of jokes to make you laugh")
-        puts
         typew("If they fail, I'm sorry.")
-        puts
         typew("Brace yourself")
     end
 
+    #additional message if user inputs '5' || '6' at graph
     def choice5_6_message
-        clear()
+        clear
         typew("I'm so happy that you feel great! Let's keep the day going with some joy!")
     end
 
+    #randomly print out jokes from array
     def random_joke_generator(array)
         ran_jokes = array.sample(5)
         
         ran_jokes.each do |joke|
-            puts `clear`
+            clear
             typew(joke)
             sleep(2)
             puts
         end
     end
 
+    #retrieve and store third entry
+    def get_third_thought
+        third_thought_array = []
+        clear
+        typew("Awesome")
+        typew("Write a short term goal to achieve by the end of the day")
+        third_thought_array = gets.strip    
+        @third_thought = third_thought_array
+    end
+
+    #write 'txt' file with user input
     def write_to_txt
         File.open("#{@name}.txt", 'a') do |line|
             line << Date.today.strftime("%d/%m/%y")
@@ -213,30 +207,40 @@ class Wellness
             line << "\n\n"
             line << "Thank you for taking part in the Wellness App\n"
             line << "Here are the entries you made for your perusal\n\n"
-            line << "\n" + "First Entry" + "\n"
+            line << "\n" + "What I'm grateful for" + "\n"
             line << "-------------------"
             line << "\n" + @first_thought + "\n" + "\n"
-            line << "\n" + "Second Entry" + "\n"
+            line << "\n" + "Makes me happy" + "\n"
             line << "-------------------"
             line << "\n" + @second_thought + "\n" + "\n"
-            line << "\n" + "Third Entry" + "\n"
+            line << "\n" + "Short term goal" + "\n"
             line << "-------------------"
             line << "\n" + @third_thought + "\n" + "\n"
-            line << "\n" + "Fourth Entry" + "\n"
-            line << "-------------------"
-            line << "\n" + @fourth_thought + "\n" + "\n"
+            line << "\n\n\nHave a nice day. Keep coding!\n\n"
         end
     end
 
+    #say goodbye to user
+    def goodbye_message
+        clear
+        typew("Thank you for being so open")
+        typew("I have created a personal file with all your entries for self-reflection")
+        typew("Remember...")
+        typew("Don't let what you cannot do intefere with what you can do")
+        clear
+        typew("Have a great day")
+    end
 
 end
 
+#joke array
 jokes = ["And the Lord said unto John \"Come forth and you will receive eternal life\". \nBut John came fifth and won a toaster.", 
     "I threw a boomerang a few years ago.\nNow I live in constant fear.", "My grandfather has the heart of a lion \nand a lifetime ban at the zoo.",
-    "Someone stole my Microsoft Office and they're gonna pay. You have my Word.", "The first rule about Alzheimers club: Don't talk about chess club", 
-    "I’ve just written a song about tortillas; actually, it’s more of a rap.", "I was raised as an only child, \nwhich really annoyed my sister",
+    "Someone stole my Microsoft Office and they're gonna pay. \nYou have my Word.", "The first rule about Alzheimers club: \nDon't talk about chess club", 
+    "I’ve just written a song about tortillas; \nactually, it’s more of a rap.", "I was raised as an only child, \nwhich really annoyed my sister",
     "Where does a king keep his armies? \nIn his sleevies."]
 
+#affirmation array
 affirmations = ["Mistakes help me learn and grow", "I haven't figured it out YET", "I am on the right track",
                 "I can do hard things", "This might take time and effort", "I stick with things and don't give up easily", 
                 "I strive for progress, not perfection", "I go after my dreams", "I cheer myself up when it gets hard", 
@@ -247,11 +251,18 @@ affirmations = ["Mistakes help me learn and grow", "I haven't figured it out YET
                 "I ask for help when I need it", "I learn from my mistakes", "I focus on my own results", 
                 "I was born to learn", "I strive to do my best", "I can learn anything"]
 
+#expression used if user chooses '1' || '2' and then skips breathing exercise                
+no_worries_expressions = ["No worries.", "Not a problem.", "That\'s ok."]                
+
+#initialize new user
 new_user = Wellness.new
 new_user.get_name
 new_user.get_location
 choice = new_user.display_graph
 
+#case statement to create appropriate path for user
+#based on choice at graph stage 
+#accounts for user wanting to skip an exercise
 case
 when choice == '5' || choice == '6'
     new_user.choice5_6_message
@@ -269,9 +280,10 @@ when choice == '3' || choice == '4'
         new_user.joke_preamble
         new_user.random_joke_generator(jokes)
     end
-when choice == '1' || choice == '2'
+else
     yes_no = new_user.breathing_preamble
     if yes_no == 'n'
+        new_user.no_worries(no_worries_expressions)
         yes_no = new_user.affirmation_preamble
         if yes_no == 'n'
             new_user.joke_preamble
@@ -298,4 +310,10 @@ when choice == '1' || choice == '2'
     end
 end
 
+
+new_user.get_third_thought
+#write file
 new_user.write_to_txt
+#say goodbye
+new_user.goodbye_message
+
