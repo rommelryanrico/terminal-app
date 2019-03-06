@@ -47,6 +47,12 @@ We really set our focus on the experience of the app. It was really important to
   * colorized_string
   * date
 
+Initially we wanted to implement very simple functionality and cared more for the experiential component of the app. However this made the source code very disorganised.
+
+The implementaion of a class and class functions, as well as a module, allowed us to structure the code in a way that was more presentable and readable. We found that the output was more efficient once the code was refactored. 
+
+Dealing with the if/else conditionals was easier when we changed to Ruby case statements.
+
 ## Setup
 
 Install gems via terminal, set require and then run main.rb
@@ -61,6 +67,7 @@ require 'date'
 
 ruby main.rb
 ```
+
 ## Screenshots
 
 
@@ -70,7 +77,6 @@ ruby main.rb
 * **Ivan Donato** - Coder Academy Cohort M0119
 
 * **Rommel Ryan Rico** - Coder Academy Cohort M0119
-
 
 ## License
 
@@ -83,6 +89,7 @@ https://github.com/rommelryanrico/terminal-app
 
 * Affirmations: 
 https://biglifejournal.com/blogs/blog/growth-mindset-statements-affirmations-classroom-home
+
 * Jokes: 
 https://thenextweb.com/shareables/2009/10/17/376-oneliners-internet/
 
