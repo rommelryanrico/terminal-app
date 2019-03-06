@@ -18,25 +18,19 @@ class Wellness
         name = ""
         clear
         typew("Hey")
-        # puts
         typew("May I ask your name?")
-        # puts
         name = gets.strip
         @name = name.capitalize
         clear
         typew("Hi #{@name}. It's nice to meet you")
-        # puts
         typew("Congratulations on being accepted into Coder Academy.")
-        # puts
         typew("It's a wonderful achievement.")
-        # puts
         clear
     end
 
     def get_location
         campus = ""
         typew("Tell me #{@name}, which campus are you located in?")
-        # puts
         puts "[1] Sydney".colorize(:color => :light_white, :background => :light_black)
         puts "[2] Brisbane".colorize(:color => :light_white, :background => :light_black)
         puts "[3] Melbourne".colorize(:color => :light_white, :background => :light_black)
@@ -57,7 +51,6 @@ class Wellness
 
     def display_graph
         typew("So #{name}, I want you to have a look at this")
-        # puts
         puts
         puts
         puts "..................................".colorize(:color => :light_white, :background => :light_black)
@@ -78,17 +71,12 @@ class Wellness
     def breathing_preamble
         response = ""
         typew("#{@name}, it's ok to feel down.")
-        # puts
         typew("But it's also important not to stay there too long")
-        # puts
         typew("Remember, you are an incredible individual.")
         clear()
         typew("We are going to do a set of breathing exercises")
-        # puts
         typew("Employing a relaxed breathing pattern calms the nervous system.")
-        # puts
         typew("Would you like to do this exercise, #{@name}?(Y/N)")
-        # puts
         response = gets.strip.downcase
         return response
     end
@@ -96,7 +84,6 @@ class Wellness
     def breathing_generator
         clear
         typew("Fantastic")
-        # puts
         typew("Remember to breathe in through your nose and out through your mouth")
         clear
         typew("Let's begin")
@@ -111,13 +98,11 @@ class Wellness
         breathing_pursed
         clear
         typew("Great")
-        # puts
     end
 
     def get_first_thought
         first_thought_array = []
         typew("Spare a moment to write one thing that you are grateful for today and why")
-        # puts
         first_thought_array = gets.strip    
         typew("Thank you for sharing your thoughts")
         @first_thought = first_thought_array
@@ -127,11 +112,8 @@ class Wellness
         response = ""
         clear
         typew("We are now going to do an affirmation exercise")
-        # puts
         typew("By broadening the basis of our self-worth, affirmations can help us regulate our emotions.")
-        # puts
         typew("Would you like to do this exercise, #{name}?(Y/N)")
-        # puts
         response = gets.strip.downcase
         return response
     end
@@ -144,7 +126,6 @@ class Wellness
     def affirmation_generator(array)
         clear
         typew("That's great to hear")
-        # puts
         typew("Remember to repeat the affirmations, word for word")
         clear
         puts typew("Let's begin")
@@ -160,9 +141,7 @@ class Wellness
     def get_second_thought
         second_thought_array = []
         typew("Great")
-        # puts
         typew("Now, write about something that makes you happy")
-        # puts
         second_thought_array = gets.strip    
         typew("Thank you for sharing that with me")
         @second_thought = second_thought_array
@@ -171,15 +150,11 @@ class Wellness
     def joke_preamble
         clear
         typew("They say that laughter is the best medicine")
-        # puts
         typew("It boosts the immune system and releases endorphins")
-        # puts
         typew("But more importantly...........laughing is fun")
         clear
         typew("Here are a series of jokes to make you laugh")
-        # puts
         typew("If they fail, I'm sorry.")
-        # puts
         typew("Brace yourself")
     end
 
@@ -203,9 +178,7 @@ class Wellness
         third_thought_array = []
         clear
         typew("Awesome")
-        # puts
         typew("Write a short term goal to achieve by the end of the day")
-        # puts
         third_thought_array = gets.strip    
         @third_thought = third_thought_array
     end
@@ -237,11 +210,8 @@ class Wellness
     def goodbye_message
         clear
         typew("Thank you for being so open")
-        # puts
         typew("I have created a personal file with all your entries for self-reflection")
-        # puts
         typew("Remember...")
-        # puts
         typew("Don't let what you cannot do intefere with what you can do")
         clear
         typew("Have a great day")
