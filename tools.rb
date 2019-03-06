@@ -4,7 +4,6 @@ module WellnessExercises
     def typew(string)
         string.each_char do |str|
             print str
-            #0.05..0.10
             slt = rand(0.05..0.10)
             sleep(slt)
         end
