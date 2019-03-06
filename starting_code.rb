@@ -294,8 +294,3 @@ end
         sleep(2)
         puts
     end
-
-
-
-    I wish I had this app in the first week of Coder Academy.
-    This is our app Here4U
