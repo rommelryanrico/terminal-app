@@ -10,7 +10,6 @@
 #get user input in relation to scale
 
 # based on user input (scale) lead user through one of four paths
-
 # Path 1
 # 1. Breathing
 # journal1 - "Write 3 things that you are grateful for today"

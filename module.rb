@@ -6,6 +6,7 @@ module WellnessExercises
             sleep(slt)
         end
         sltime
+        puts
     end
 
     def sltime 
@@ -37,6 +38,17 @@ module WellnessExercises
         4.times do |x|
             puts x += 1
             sleep(1)
+        end
+    end
+
+    def no_worries(array)
+        expressions = array.sample(1)
+        
+        expressions.each do |exp|
+            puts `clear`
+            typew(exp)
+            sleep(1)
+            puts
         end
     end
 end
