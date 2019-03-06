@@ -94,16 +94,12 @@ class Wellness
         typew("Remember to breathe in through your nose and out through your mouth")
         clear
         typew("Let's begin")
-        inhale
+        breathe_in
         breathe_out
-        breathing_pursed
-        inhale
+        breathe_in
         breathe_out
-        breathing_pursed
-        inhale
+        breathe_in
         breathe_out
-        breathing_pursed
-        clear
         typew("Great")
     end
 

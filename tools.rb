@@ -22,15 +22,11 @@ module WellnessExercises
         puts `clear`
     end
 
-    #exhale command
-    def breathe_out_command
-        puts `clear`
-        puts typew('Exhale')
-    end
-
     #print out exhale count to screen
-    def breath_out
-        puts `clear`
+    def breathe_out
+        clear
+        typew('Exhale')
+        clear
         4.times do |x|
             puts x += 1
             sleep(1)
@@ -38,10 +34,10 @@ module WellnessExercises
     end
 
     #print out inhale count to screen
-    def inhale
-        puts `clear`
+    def breathe_in
+        clear
         puts typew("Inhale")
-        puts `clear`
+        clear
         4.times do |x|
             puts x += 1
             sleep(1)
