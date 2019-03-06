@@ -77,7 +77,6 @@ ruby main.rb
 <img width="1440" alt="slack1" src="https://user-images.githubusercontent.com/47291020/53855570-460f8a00-4022-11e9-9364-f4daf024c76f.png">
 <img width="1440" alt="slack3" src="https://user-images.githubusercontent.com/47291020/53855571-460f8a00-4022-11e9-8de9-290ef3daa3eb.png">
 <img width="1440" alt="trello1" src="https://user-images.githubusercontent.com/47291020/53855572-46a82080-4022-11e9-90ca-916c0003c59e.png">
-
 #### Testing
 ![pry test 1](https://user-images.githubusercontent.com/47291020/53860451-3c435200-4035-11e9-8243-9eea28799bbc.jpg)
 ![pry test 2](https://user-images.githubusercontent.com/47291020/53860457-3e0d1580-4035-11e9-8eac-53ec124cd08d.jpg)
