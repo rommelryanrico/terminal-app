@@ -1,9 +1,11 @@
-require_relative 'module'
+require_relative 'tools'
 require 'colorize'
 require 'colorized_string'
 require 'date'
 
+#class defined - wellness
 class Wellness
+
     include WellnessExercises
     attr_accessor :name, :campus, :first_thought, :second_thought, :third_thought, :fourth_thought
     def initialize
@@ -13,7 +15,8 @@ class Wellness
         @second_thought = ""
         @third_thought = ""
     end
-
+    
+    #retrieve and store user name
     def get_name
         name = ""
         clear
@@ -28,6 +31,7 @@ class Wellness
         clear
     end
 
+    #retrieve and store user location
     def get_location
         campus = ""
         typew("Tell me #{@name}, which campus are you located in?")
@@ -48,7 +52,8 @@ class Wellness
         clear
     end
 
-
+    #display graph providing choice for user
+    #multiple use of puts to ensure proper output to user
     def display_graph
         typew("So #{name}, I want you to have a look at this")
         puts
@@ -68,6 +73,7 @@ class Wellness
         return scale
     end
     
+    #text section that connects graph to first exercise
     def breathing_preamble
         response = ""
         typew("#{@name}, it's ok to feel down.")
@@ -81,6 +87,7 @@ class Wellness
         return response
     end
     
+    #breathing exercise
     def breathing_generator
         clear
         typew("Fantastic")
@@ -88,18 +95,19 @@ class Wellness
         clear
         typew("Let's begin")
         inhale
-        breathe_out_command
+        breathe_out
         breathing_pursed
         inhale
-        breathe_out_command
+        breathe_out
         breathing_pursed
         inhale
-        breathe_out_command
+        breathe_out
         breathing_pursed
         clear
         typew("Great")
     end
 
+    #retrieve and store first thought for 'txt' file
     def get_first_thought
         first_thought_array = []
         typew("Spare a moment to write one thing that you are grateful for today and why")
@@ -108,6 +116,7 @@ class Wellness
         @first_thought = first_thought_array
     end
     
+    #text section that connects between breathing and affirmation
     def affirmation_preamble
         response = ""
         clear
@@ -118,11 +127,13 @@ class Wellness
         return response
     end
 
+    #additional message in case user inputs '3' || '4' at graph
     def choice3_4_message
         clear
         typew("I'm glad you're feeling ok. Here is something that might help you through the day")
     end
 
+    #randomly prints out affirmations from an array
     def affirmation_generator(array)
         clear
         typew("That's great to hear")
@@ -138,6 +149,7 @@ class Wellness
         end
     end
 
+    #retrieve and store second entry for 'txt' file
     def get_second_thought
         second_thought_array = []
         typew("Great")
@@ -147,6 +159,7 @@ class Wellness
         @second_thought = second_thought_array
     end
 
+    #begins jokes section
     def joke_preamble
         clear
         typew("They say that laughter is the best medicine")
@@ -158,11 +171,13 @@ class Wellness
         typew("Brace yourself")
     end
 
+    #additional message if user inputs '5' || '6' at graph
     def choice5_6_message
         clear
         typew("I'm so happy that you feel great! Let's keep the day going with some joy!")
     end
 
+    #randomly print out jokes from array
     def random_joke_generator(array)
         ran_jokes = array.sample(5)
         
@@ -174,6 +189,7 @@ class Wellness
         end
     end
 
+    #retrieve and store third entry
     def get_third_thought
         third_thought_array = []
         clear
@@ -183,6 +199,7 @@ class Wellness
         @third_thought = third_thought_array
     end
 
+    #write 'txt' file with user input
     def write_to_txt
         File.open("#{@name}.txt", 'a') do |line|
             line << Date.today.strftime("%d/%m/%y")
@@ -203,10 +220,11 @@ class Wellness
             line << "\n" + "Short term goal" + "\n"
             line << "-------------------"
             line << "\n" + @third_thought + "\n" + "\n"
-            line <<
+            line << "\n\n\nHave a nice day. Keep coding!\n\n"
         end
     end
 
+    #say goodbye to user
     def goodbye_message
         clear
         typew("Thank you for being so open")
@@ -219,12 +237,14 @@ class Wellness
 
 end
 
+#joke array
 jokes = ["And the Lord said unto John \"Come forth and you will receive eternal life\". \nBut John came fifth and won a toaster.", 
     "I threw a boomerang a few years ago.\nNow I live in constant fear.", "My grandfather has the heart of a lion \nand a lifetime ban at the zoo.",
     "Someone stole my Microsoft Office and they're gonna pay. \nYou have my Word.", "The first rule about Alzheimers club: \nDon't talk about chess club", 
     "I’ve just written a song about tortillas; \nactually, it’s more of a rap.", "I was raised as an only child, \nwhich really annoyed my sister",
     "Where does a king keep his armies? \nIn his sleevies."]
 
+#affirmation array
 affirmations = ["Mistakes help me learn and grow", "I haven't figured it out YET", "I am on the right track",
                 "I can do hard things", "This might take time and effort", "I stick with things and don't give up easily", 
                 "I strive for progress, not perfection", "I go after my dreams", "I cheer myself up when it gets hard", 
@@ -235,13 +255,18 @@ affirmations = ["Mistakes help me learn and grow", "I haven't figured it out YET
                 "I ask for help when I need it", "I learn from my mistakes", "I focus on my own results", 
                 "I was born to learn", "I strive to do my best", "I can learn anything"]
 
+#expression used if user chooses '1' || '2' and then skips breathing exercise                
 no_worries_expressions = ["No worries.", "Not a problem.", "That\'s ok."]                
 
+#initialize new user
 new_user = Wellness.new
 new_user.get_name
 new_user.get_location
 choice = new_user.display_graph
 
+#case statement to create appropriate path for user
+#based on choice at graph stage 
+#accounts for user wanting to skip an exercise
 case
 when choice == '5' || choice == '6'
     new_user.choice5_6_message
@@ -289,7 +314,10 @@ else
     end
 end
 
+
 new_user.get_third_thought
+#write file
 new_user.write_to_txt
+#say goodbye
 new_user.goodbye_message
 

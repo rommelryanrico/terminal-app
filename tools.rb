@@ -1,4 +1,6 @@
+#module with tools to simulate computer sentience
 module WellnessExercises
+    #prints out each char at random interval to simulate typing in real time
     def typew(string)
         string.each_char do |str|
             print str
@@ -9,28 +11,33 @@ module WellnessExercises
         puts
     end
 
+    #randomises time between each new line
     def sltime 
         time = rand(0.5..1.5)
         sleep(time)
     end
 
+    #created to avoid writing puts `clear` a million times :)
     def clear
         puts `clear`
     end
 
+    #exhale command
     def breathe_out_command
         puts `clear`
         puts typew('Exhale')
     end
 
-    def breathing_pursed
+    #print out exhale count to screen
+    def breath_out
         puts `clear`
-        5.times do |x|
+        4.times do |x|
             puts x += 1
             sleep(1)
         end
     end
 
+    #print out inhale count to screen
     def inhale
         puts `clear`
         puts typew("Inhale")
@@ -41,6 +48,7 @@ module WellnessExercises
         end
     end
 
+    #print random expressions to user
     def no_worries(array)
         expressions = array.sample(1)
         
