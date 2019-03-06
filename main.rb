@@ -225,7 +225,7 @@ class Here_4_U
         typew("I have created a personal file with all your entries for self-reflection")
         typew("Remember, don't let what you cannot do intefere with what you can do")
         clear
-        typew("Have a great day!")
+        typew("Have a great day, #{@name}!")
     end
 
 end
