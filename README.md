@@ -5,21 +5,23 @@
 Here4U is a terminal application written in Ruby which helps Coder Academy students cope with the ~~inhumane~~ stresses provided by the fast track course.
 
 ## Table of Contents
-* [Motivation & Inspiration](#Motivation-&-Inspiration)
-* [Build Process](#Build-Process)
-* [Features](#Features)
-* [Technical](#Technical)
-* [Setup](#Setup)
-* [Screenshots](#Screenshots)
-* [Authors](#Authors)
-* [License](#License)
-* [Master Repository](#Master-Repository)
-* [References](#References)
-* [Acknowledgements](#Acknowledgements)
+- [Here4U](#here4u)
+  - [Table of Contents](#table-of-contents)
+  - [Motivation & Inspiration](#motivation--inspiration)
+  - [Build Process](#build-process)
+  - [Features](#features)
+  - [Technical](#technical)
+  - [Setup](#setup)
+  - [Screenshots](#screenshots)
+  - [Authors](#authors)
+  - [License](#license)
+  - [Master Repository](#master-repository)
+  - [References](#references)
+  - [Acknowledgements](#acknowledgements)
 
 ## Motivation & Inspiration
 
-The idea for this application came to Ryan after his experience of the first week of this course. He was feeling quite overwhelmed with everything and his stress levels were at an all time high. He eventually imploded by the end of the week and lost all confidence in him myself. But through talking with friends, family and peers he was able to forget his worries, reframe his thinking and remember the reasons why he decided to do this course.
+The idea for this application came to Ryan after his experience of the first week of this course. He was feeling quite overwhelmed with everything and his stress levels were at an all time high. He eventually imploded by the end of the week and lost all confidence in himself. But through talking with friends, family and peers he was able to forget his worries, reframe his thinking and remember the reasons why he decided to do this course.
 
 ## Build Process
 
