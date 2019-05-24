@@ -17,7 +17,6 @@ Here4U is a terminal application written in Ruby which helps Coder Academy stude
   - [License](#license)
   - [Master Repository](#master-repository)
   - [References](#references)
-  - [Acknowledgements](#acknowledgements)
 
 ## Motivation & Inspiration
 
@@ -102,9 +101,3 @@ https://biglifejournal.com/blogs/blog/growth-mindset-statements-affirmations-cla
 
 * Jokes: 
 https://thenextweb.com/shareables/2009/10/17/376-oneliners-internet/
-
-## Acknowledgements
-
-* A-Pain: for the sick beats
-* Coder Academy: for the sick beats
-* Mum: also for the sick beats
